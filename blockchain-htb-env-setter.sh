@@ -1,5 +1,5 @@
 #! /usr/bin/env bash
-json_file="/opt/blockchain-connection.json"
+json_file="$HOME/repos/auto-setup/blockchain-connection.json"
 
 # Extract the values from the JSON file using jq and assign them to variables
 private_key=$(jq -r '.PrivateKey' "$json_file")
