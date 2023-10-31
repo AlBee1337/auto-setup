@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+sudo ip tuntap add user $USER mode tun ligolo
+sudo ip link set ligolo up
+sudo /opt/ligolo-proxy/proxy -selfcert -laddr 0.0.0.0:443
+sudo ip route add $1 dev ligolo
